@@ -38,7 +38,9 @@ function render(variables = {}) {
     variables.lastName == null ? "Boillet" : variables.lastName
   }</h1>
           <h2>${variables.role == null ? "Web Developer" : variables.role}</h2>
-          <h3>Miami, USA</h3>          
+          <h3>${variables.city == null ? "Miami, " : variables.city + ", "}${
+    variables.country == null ? "USA" : variables.country
+  }</h3>          
           <ul class=${variables.socialMediaPosition}>
             <li><a href="https://twitter.com/${
               variables.twitter == null ? "4geeksacademy" : variables.twitter
